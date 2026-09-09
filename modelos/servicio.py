@@ -52,6 +52,19 @@ class Servicio:
 
         return (self.horas_maquina * self.tarifa) + self.gasto_extra
 
+
+
+ 
+def buscar_por_codigo(servicios, codigo):
+    
+    #Función que busca en la lista general de objetos y obtiene la clase Servicio evaluando el codigo
+    #Retorna el objeto de clase Servicio si lo encuentra, en caso no exista retorna None
+    
+    for servicio in servicios:
+        if servicio.codigo == codigo:
+            return servicio
+    return None
+
  
 
 
