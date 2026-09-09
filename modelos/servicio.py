@@ -43,9 +43,14 @@ class Servicio:
         self.mantenimiento = "Sin mantenimiento registrado"
         self.documentos = "Pendiente"
 
-        # Usamos la función calcular_costo para obtener directamente el costo
-        self.costo = (self.horas_maquina * self.tarifa) + self.gasto_extra
+        # Usamos la función calcular_costo() para obtener directamente el costo
+        self.costo = self.calcular_costo()
 
+    def calcular_costo(self):
+
+        #Calculamos el costo total aplicando (hrs de máquina * tarifa) + gastos extra y lo creamos como función para reutilizar.
+
+        return (self.horas_maquina * self.tarifa) + self.gasto_extra
 
  
 
